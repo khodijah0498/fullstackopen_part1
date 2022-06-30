@@ -18,12 +18,14 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>give feedback</h1>
+      <div>
       <button onClick={addGood}>good</button>
       <button onClick={addNeutral}>neutral</button>
       <button onClick={addBad}>bad</button>
-      <Statistics good = {good} neutral ={neutral} bad = {bad} sum ={sum} average ={average} positive ={positive}/>
+      </div>
+      {sum ? <Statistics good = {good} neutral ={neutral} bad = {bad} sum ={sum} average ={average} positive ={positive}/> : "No feedback"}
           </div>
   );
 };
